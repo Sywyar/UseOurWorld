@@ -399,7 +399,8 @@ public class ReUseOurWorld {
             for (File file : files) {
                 if (file.exists()){
                     if (file.isFile()) {
-                        outputText.updateString(Language.getString("useourworld_delete_file")+"("+file.getName()+"):"+(file.delete()?Language.getString("useourworld_success"):Language.getString("useourworld_fail")));
+                        String stat = file.delete()?Language.getString("useourworld_success"):Language.getString("useourworld_fail");
+                        new Thread(()->outputText.updateString(Language.getString("useourworld_delete_file")+"("+file.getName()+"):"+stat)).start();
                     } else {
                         File[] var = file.listFiles();
                         if (var != null){
@@ -407,7 +408,8 @@ public class ReUseOurWorld {
                                 deleteFile(var1);
                             }
                         }
-                        outputText.updateString(Language.getString("useourworld_delete_dir")+"("+file.getName()+"):"+(file.delete()?Language.getString("useourworld_success"):Language.getString("useourworld_fail")));
+                        String stat = file.delete()?Language.getString("useourworld_success"):Language.getString("useourworld_fail");
+                        new Thread(()->outputText.updateString(Language.getString("useourworld_delete_dir")+"("+file.getName()+"):"+stat)).start();
                     }
                 }
             }
