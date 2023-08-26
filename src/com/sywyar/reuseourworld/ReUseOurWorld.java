@@ -228,6 +228,14 @@ public class ReUseOurWorld {
                                 saveError(ex);
                                 throw new RuntimeException(ex);
                             }catch (JSchException ex){
+
+                                serverType.setEnabled(true);
+                                workMode.setEnabled(true);
+                                host.setEditable(true);
+                                port.setEditable(true);
+                                username.setEditable(true);
+                                password.setEditable(true);
+
                                 JOptionPane.showMessageDialog(null,Language.getString("useourworld_sftp_connect_error"),Language.getString("useourworld_error_title"),JOptionPane.WARNING_MESSAGE);
                                 outputText.updateString(Language.getString("useourworld_sftp_connect_error"));
                             }

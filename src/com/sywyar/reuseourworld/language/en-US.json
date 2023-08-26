@@ -25,8 +25,7 @@
   "useourworld_delete_dir": "Delete Folder",
   "useourworld_success": "Success",
   "useourworld_fail": "Failed",
-  "useourworld_error_title": "Something
- wrong",
+  "useourworld_error_title": "Something wrong",
   "useourworld_error_message": "Something wrong, please upload log file to developer",
   "useourworld_download_jar_error": "Cannot find file in jar, please redownload jar file",
   "useourworld_download_server_no_exceed": "Not found files in server",
