@@ -46,10 +46,10 @@ public class ReUseOurWorld {
         System.setProperty("file.encoding","utf-8");
 
         MainWindows selectLanguage = new MainWindows(400,200);
-        selectLanguage.setTitle("Select Language");
+        selectLanguage.setTitle(Language.getString("select_language_windows_title"));
         JComboBox<String> switchType = new JComboBox<>(new String[]{"English","简体中文"});
         switchType.setSelectedItem("English");
-        JButton confirm = new JButton("OK");
+        JButton confirm = new JButton(Language.getString("select_language_button_confirm"));
         switchType.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -59,7 +59,7 @@ public class ReUseOurWorld {
             }
         });
         switchType.setBounds(10,35,150,30);
-        confirm.setBounds(170,35,50,30);
+        confirm.setBounds(170,35,100,30);
         selectLanguage.background.add(switchType);
         selectLanguage.background.add(confirm);
         selectLanguage.setVisible(true);
@@ -209,7 +209,7 @@ public class ReUseOurWorld {
                                 } else if (workMode.getSelectedItem().equals(Language.getString("useourworld_download"))) {
                                     download(list,sftp);
                                 } else if (workMode.getSelectedItem().equals(Language.getString("useourworld_download_replace"))) {
-                                    replace(list,sftp, (String) serverType.getSelectedItem(),download(list,sftp));
+                                    replace((String) serverType.getSelectedItem(),download(list,sftp));
                                 }
 
                                 Writer(list.toString(),listJson);
@@ -340,9 +340,9 @@ public class ReUseOurWorld {
         return localZip;
     }
 
-    public static void replace(SuperJsonObject list,ChannelSftp sftp,String serverType,File localZip){
+    public static void replace(String serverType,File localZip){
         if (localZip==null){
-            outputText.updateString("useourworld_download_server_no_file");
+            outputText.updateString(Language.getString("useourworld_download_server_no_file"));
             return;
         }
         switch (serverType){
