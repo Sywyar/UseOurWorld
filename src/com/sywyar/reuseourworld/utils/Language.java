@@ -34,7 +34,7 @@ public class Language {
     public static String getFileHashCode(String str){
         switch (str){
             case "zh-CN":return "d350321ceef1f1a7cf10df7ab8f0f679435fac28eb35b387983be960ffeff250";
-            case "en-US":return "28354b95d3dbde5d86edc59956ef3dd1f9feab5de7e70edd29e9bf520bec6c76";
+            case "en-US":return "747a3cc67c8923330d2f245d172f9fef642c8e5a02d2ef23b1766cc3c861cca";
             default:return "";
         }
     }
