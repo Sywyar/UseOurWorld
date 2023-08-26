@@ -19,7 +19,7 @@
   "useourworld_sftp_exceed_max": "Server Files count out of limited，preparing for delete",
   "useourworld_sftp_transferred": "Transimission finished",
   "useourworld_sftp_transmission_progress": "Progress ",
-  "useourworld_sftp_end": "Transimission finished! Time elapsed: ",
+  "useourworld_sftp_end": "Transimission finished! Time elapsed ",
   "useourworld_sftp_end_saved": "Downloaded! Save to ",
   "useourworld_delete_file": "Delete File",
   "useourworld_delete_dir": "Delete Folder",
