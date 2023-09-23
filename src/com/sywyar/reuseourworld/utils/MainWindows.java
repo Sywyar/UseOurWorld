@@ -4,11 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.io.InputStream;
 
 public class MainWindows extends JFrame {
-    private final int windowWidth = 800;
-    private final  int windowHigh = 600;
     public JPanel background;
     private MainWindows(){
     }
